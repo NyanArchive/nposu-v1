@@ -1,0 +1,3 @@
+[submodule "src/arrpc"]
+	path = src/arrpc
+	url = https://github.com/OpenAsar/arrpc

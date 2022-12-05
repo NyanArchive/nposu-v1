@@ -1,0 +1,22 @@
+{
+	"name": "nposu",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:16",
+	// Install pnpm
+	"onCreateCommand": "curl -fsSL https://get.pnpm.io/install.sh | SHELL=bash bash -",
+	"postCreateCommand": "pnpm install",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"files.autoSave": "afterDelay",
+				"files.associations": {
+					"settings.json": "jsonc"
+				}
+			},
+			"extensions": [
+				"yzhang.markdown-all-in-one",
+				"me-dutour-mathieu.vscode-github-actions",
+				"bierner.github-markdown-preview"
+			]
+		}
+	}
+}

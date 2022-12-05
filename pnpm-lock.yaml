@@ -1,0 +1,95 @@
+lockfileVersion: 5.4
+
+specifiers:
+  bancho.js: ^0.11.0
+  node-fetch: ^2.6.7
+  tmi.js: ^1.8.5
+  ws: ^8.11.0
+
+dependencies:
+  bancho.js: 0.11.0
+  node-fetch: 2.6.7
+  tmi.js: 1.8.5
+  ws: 8.11.0
+
+packages:
+
+  /bancho.js/0.11.0:
+    resolution: {integrity: sha512-kUhNgFPGINxhRJW81wRxvZJhb4hINwOmorIuOxfbuhzlrjL9tmxfJGvGp/nELOnpCPpERiYGz/GmzlBcIzQVWQ==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      weak-value-map: ^1.0.1
+    peerDependenciesMeta:
+      weak-value-map:
+        optional: true
+    dependencies:
+      nodesu: 0.7.3
+      rate-limiter-flexible: 2.4.1
+    dev: false
+
+  /limiter/1.1.5:
+    resolution: {integrity: sha512-FWWMIEOxz3GwUI4Ts/IvgVy6LPvoMPgjMdQ185nN6psJyBJ4yOpzqm695/h5umdLJg2vW3GR5iG11MAkR2AzJA==}
+    dev: false
+
+  /node-fetch/2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
+
+  /nodesu/0.7.3:
+    resolution: {integrity: sha512-RTHkaRyt+alXkzp8TDH1r4dtkp38jeqFyGgFBCT6uSqcGIOUdh7EqghwN1PrcGVqTjPPjWUCnqoNay+JOMw3bg==}
+    engines: {node: '>=4.0.0'}
+    dependencies:
+      limiter: 1.1.5
+    dev: false
+
+  /rate-limiter-flexible/2.4.1:
+    resolution: {integrity: sha512-dgH4T44TzKVO9CLArNto62hJOwlWJMLUjVVr/ii0uUzZXEXthDNr7/yefW5z/1vvHAfycc1tnuiYyNJ8CTRB3g==}
+    dev: false
+
+  /tmi.js/1.8.5:
+    resolution: {integrity: sha512-A9qrydfe1e0VWM9MViVhhxVgvLpnk7pFShVUWePsSTtoi+A1X+Zjdoa7OJd7/YsgHXGj3GkNEvnWop/1WwZuew==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      node-fetch: 2.6.7
+      ws: 8.11.0
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+    dev: false
+
+  /tr46/0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+    dev: false
+
+  /webidl-conversions/3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+    dev: false
+
+  /whatwg-url/5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
+    dev: false
+
+  /ws/8.11.0:
+    resolution: {integrity: sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+    dev: false
