@@ -26,7 +26,7 @@ const on_message = async (twitch_client, osuirc_client, settings) => {
                     const beatmap = await osuv2.get_beatmap_info(matches[matches.length - 1])
                     if (!beatmap) return
                     twitch_client.say(channel, `[${beatmap.status}] ${beatmap.artist} - ${beatmap.title} [${beatmap.version}] | ${beatmap.bpm}BPM ${beatmap.difficulty_rating}★ `)
-                    await osusend(settings.channels[channel.replace("#", "")], `[${beatmap.status}] [https://osu.ppy.sh/b/${beatmap.id} ${beatmap.artist} - ${beatmap.title} [${beatmap.version}]] | ${beatmap.bpm}BPM ${beatmap.difficulty_rating}★ | [https://api.nerinyan.moe/d/${beatmap.id} NeriNyan]`)
+                    await osusend(settings.channels[channel.replace("#", "")], `[${beatmap.status}] [https://osu.ppy.sh/b/${beatmap.id} ${beatmap.artist} - ${beatmap.title} [${beatmap.version}]] | ${beatmap.bpm}BPM ${beatmap.difficulty_rating}★ | [https://api.nerinyan.moe/d/${beatmap.setid} NeriNyan]`)
                     break
                 } else {
                     const beatmapsets = await osuv2.get_beatmapsets_info(matches[matches.length - 1])
