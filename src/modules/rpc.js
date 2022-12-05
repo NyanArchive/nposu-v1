@@ -1,6 +1,6 @@
 const { WebSocket } = require("ws")
 
-let npra
+let npraw
 
 const connect = () => {
     new WebSocket("ws://127.0.0.1:1337")
@@ -12,7 +12,7 @@ const connect = () => {
             if (data.activity?.application_id === "367827983903490050") npraw = data
         })
         .on("error", async () => {
-            console.log("failed to connect websocket! trying to run arrpc and reconecting..")
+            console.log("failed to connect websocket! trying to run arrpc and reconnecting..")
             await import("../arrpc/src/index.js")
             await connect()
         })
