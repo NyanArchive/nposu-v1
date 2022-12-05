@@ -12,7 +12,7 @@ const connect = () => {
             if (data.activity?.application_id === "367827983903490050") npraw = data
         })
         .on("error", async () => {
-            console.log("failed to connect websocket! trying to run arrpc and recconecting..")
+            console.log("failed to connect websocket! trying to run arrpc and reconecting..")
             await import("../arrpc/src/index.js")
             await connect()
         })
