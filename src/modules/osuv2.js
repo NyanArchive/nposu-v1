@@ -3,11 +3,11 @@ const fetch = require("node-fetch")
 
 let osutoken_data
 let osutoken
-let latestReferesh
+let recentRefresh
 
 const get_token = (async () => {
     console.log("Fetching osu!v2 token..")
-    recentReferesh = Math.floor(new Date().getTime() / 1000)
+    recentRefresh = Math.floor(new Date().getTime() / 1000)
     const token = await fetch("https://osu.ppy.sh/oauth/token", {
         method: "POST",
         headers: {
@@ -29,7 +29,7 @@ const get_token = (async () => {
 osutoken_data = get_token().then(res => res)
 
 const refresh_token = (async () => {
-    let expire = recentReferesh + osutoken_data.expires_in
+    let expire = recentRefresh + osutoken_data.expires_in
     let now = Math.floor(new Date().getTime() / 1000)
     if (expire - now <= 0) {
         console.log("Refreshing osu!v2 token..")
