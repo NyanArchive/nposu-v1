@@ -32,9 +32,7 @@ const refresh_token = (async () => {
     let expire = recentRefresh + osutoken_data.expires_in
     let now = Math.floor(new Date().getTime() / 1000)
     if (expire - now <= 0) {
-        console.log("Refreshing osu!v2 token..")
         osutoken_data = await get_token()
-        console.log(osutoken_data.expires_in)
         osutoken = osutoken_data.access_token
     }
     return osutoken
