@@ -19,7 +19,7 @@ const on_message = async (twitch_client, osuirc_client, settings) => {
             if (!user) return
             return twitch_client.say(channel, `${user.username} - #${user.rank} (${user.country_code}: #${user.country_rank}) ${user.pp}pp`)
         }
-        if (tags.badges.broadcaster) return
+        if (tags.badges?.broadcaster) return
         for (let pattern in osu_beatmap_patterns) {
             const matches = message.match(osu_beatmap_patterns[pattern])
             if (matches) {
