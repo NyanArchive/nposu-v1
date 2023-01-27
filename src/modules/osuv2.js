@@ -72,6 +72,7 @@ const get_beatmapsets_info = async (beatmapsets_id) => {
     const data = await beatmapsets.json()
     if (!data.id) return null
     else return {
+        id: data.id,
         artist: data.artist,
         creator: data.creator,
         status: data.status.toUpperCase(),
